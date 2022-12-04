@@ -33,6 +33,24 @@
         imcCalculado= Math.round(calculoIMC(pesoIn,alturaIn));
         imprimir(nombre + " su IMC es: "+ imcCalculado)
 
+        if (imcCalculado<18.5){
+            imprimir("IMC abajo de los recomendado");
+        }
+
+        if (imcCalculado>=18.5){
+            if (imcCalculado<25)
+            imprimir("IMC dentro del rango Normal");
+        }
+        if (imcCalculado>=25){
+            if (imcCalculado<30)
+            imprimir("IMC en el rango de Sobre peso");
+        }
+
+        
+        if (imcCalculado>=30){
+            imprimir("IMC considerado Obesidad");
+        }
+
     </script>
 </body>
 </html>
