@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+    var color="blue";
+    var puedoDibujar = false;
+
+    function dibujarPaleta(x,color){
+        pincel.fillStyle=color;
+        pincel.fillRect(x,0,30,30);
+    }
+    
+    function cambiarColor(evento){
+        var h = evento.pageX - pantalla.offsetLeft;
+        var v = evento.pageY - pantalla.offsetTop;
+        
+        if (h<30 && v<30){
+            color="red";
+            console.log(h+ "  " +v+ "  "+ color);
+        }
+        if (h>31 && h<60 && v<30){
+            color="green";
+            console.log(h+ "  " +v+ "  "+ color);
+        }
+        if (h>61 && h<90 && v<30){
+            color="blue";
+            console.log(h+ "  " +v+ "  "+ color);
+        }
+
+        
+    }
+
+    function dibujarCirculo(evento) {
+
+        if(puedoDibujar) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            if ((x>95)||(y>35)){
+                pincel.fillStyle = color;
+                pincel.beginPath();
+                pincel.arc(x, y, 5, 0, 2 * 3.14);
+                pincel.fill();
+            }
+        }
+
+    }
+    dibujarPaleta(0,"red");
+    dibujarPaleta(30,"green");
+    dibujarPaleta(60,"blue");
+    pantalla.onclick = cambiarColor;
+    pantalla.onmousemove = dibujarCirculo;
+
+    function habilitarDibujar() {
+
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+
+        puedoDibujar = false;
+    }
+    
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+
+    
+
+</script>
+</body>
+</html>
