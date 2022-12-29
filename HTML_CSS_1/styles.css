@@ -85,7 +85,7 @@ main{
 form{
     margin: 40px 0px;
 }
-form label, form p{
+form label, form legend{
     display: block;
     font-size: 20px;
     margin: 0 0 10ppx; 
@@ -99,4 +99,62 @@ form label, form p{
 
 .checkbox{
     margin: 20px 0;
+}
+.enviar{
+    width: 30%;
+    padding: 15px 0;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgb(206, 146, 123);
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2);
+}
+table{
+    margin: 40px;
+}
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+td,th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/* css del home >>>> */
+
+.banner{
+    width: 100%;
+}
+.titulo-ppal{
+    text-align: center;
+    font-size: 2em;
+    padding: 0 0 1em;
+    clear: left;
+}
+.principal p{
+    margin: 0 0 1em;
+}
+.principal strong{
+    font-weight: bold;
+}
+.principal em{
+    font-style: italic;
+}
+.utiles{
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+.imagenDiferenciales{
+    width: 60%;
 }
