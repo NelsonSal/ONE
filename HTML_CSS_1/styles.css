@@ -1,7 +1,3 @@
-body{
-    font-family: 'Montserrat', sans-serif;
-}
-
 header{
     background-color: #BBBBBB;
     padding: 20px 0;
@@ -82,7 +78,10 @@ footer{
     font-size: 13px;
     margin: 20px;
 }
-
+main{
+    width: 940px;
+    margin: 0 auto;
+}
 form{
     margin: 40px 0px;
 }
@@ -136,12 +135,6 @@ td,th{
 .banner{
     width: 100%;
 }
-.principal{
-    background-color: #fefefe;
-    padding: 3em 0;
-    width: 940px;
-    margin: 0 auto;
-}
 .titulo-ppal{
     text-align: center;
     font-size: 2em;
@@ -162,45 +155,10 @@ td,th{
     float: left;
     margin: 0 20px 20px 0;
 }
-.mapa{
-    padding: 3em 0;
-    background: linear-gradient(#fefefe, #888888);
-}
-.mapa p{
-    margin: 0 0 2em;
-    text-align: center;
-}
-.mapa-contenido{
-    width: 940px;
-    margin: 0 auto;
-}
-.contenido-diferenciales{
-    width: 940px;
-    margin: 0 auto;
-    
-}
-.diferenciales{
-    background-color: #888888;
-    padding: 3em 0;
-}
-.lista-diferenciales{
-    width: 40%;
-    display: inline-block;
-    vertical-align: top;
-}
-.items{
-    line-height: 1.5;
-}
-.items:before{
-    content: "✪ "
-}
-.items:first-child{
-    font-weight: bold;
-}
-.imagen-diferenciales{
+.imagenDiferenciales{
     width: 60%;
-    box-shadow: 10px 10px 30px 15px #000000;
 }
+<<<<<<< HEAD
 .imagen-diferenciales:hover{
     opacity: 0.3;
 }
@@ -230,3 +188,5 @@ y esta es otra modificacion
 =======
 Voy a poner esto aca a ver que pasa
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of f0d18fa (Modificicaiones hasta modulo final curso)
