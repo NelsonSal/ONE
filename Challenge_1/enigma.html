@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma</title>
+</head>
+<body>
+    <input type="text" id="mensajero">
+    <button onclick="encriptar()">Encriptar!</button>
+    <button onclick="desencriptar()">Desencriptar!</button>
+    <button onclick="copiarAlPortapapeles('resultado')">Copiar!</button>
+
+    <div>
+        <label for="resultado" id="resultado">El mensaje acá</label>
+        <!-- <span id="resultado"></span> //Tambien funciona con span-->
+    </div>
+    
+
+</body>
+
+<script>
+        
+    function encriptar(){
+            mensaje = document.getElementById("mensajero").value;
+            encriptado=mensaje.replaceAll("e","enter");
+            encriptado=encriptado.replaceAll("i","imes");
+            encriptado=encriptado.replaceAll("a","ai");
+            encriptado=encriptado.replaceAll("o","ober");
+            encriptado=encriptado.replaceAll("u","ufat");
+            console.log("encriptado: ",encriptado);//solo para verificar en la consola
+            document.getElementById('resultado').innerHTML = encriptado;
+            
+    }
+    function desencriptar(){
+        mensaje = document.getElementById("mensajero").value;
+        desencriptado=mensaje.replaceAll("enter","e");
+        desencriptado=desencriptado.replaceAll("imes","i");
+        desencriptado=desencriptado.replaceAll("ai","a");
+        desencriptado=desencriptado.replaceAll("ober","o");
+        desencriptado=desencriptado.replaceAll("ufat","u");
+        console.log("desencriptado: ",desencriptado); //solo para verificar en la consola
+        document.getElementById('resultado').innerHTML = desencriptado;
+    }
+    function copiarAlPortapapeles(id_elemento) {
+        var aux = document.createElement("input");
+        aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("copy");
+        document.body.removeChild(aux);
+    }
+        
+</script>
+</html>
