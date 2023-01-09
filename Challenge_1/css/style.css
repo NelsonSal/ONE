@@ -132,7 +132,11 @@
     border: 1px solid #0A3871;
     margin-top: 5.5rem;
 }
-
+.footer{
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.8rem;
+}
 @media screen and (max-width:769px) {
     .logo{
         
